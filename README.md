@@ -12,7 +12,7 @@ Design a vending machine in code. The vending machine, once a product is selecte
 ###### Coin
 		- knows its value
 ###### Container
-		- knows how many of each product it has
+		- knows how many products it holds
 		- releases product
 		- receives product load
 ###### Till
