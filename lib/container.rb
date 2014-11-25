@@ -1,9 +1,13 @@
 class Container
 
-	attr_accessor :products
+	attr_accessor :products_count
 
 	def initialize
-		@products = 100
+		@products_count = 100
+	end
+
+	def release(number)
+		@products_count -= number
 	end
 
 end
