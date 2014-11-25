@@ -1,9 +1,10 @@
 class Coin
 
-	attr_reader :value
+	attr_reader :value, :name
 
-	def initialize(value)
+	def initialize(value, name)
 		@value = value
+		@name = "#{name}"
 	end
 
 end

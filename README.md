@@ -9,8 +9,10 @@ Design a vending machine in code. The vending machine, once a product is selecte
 
 ###### Product
 		- knows its price
+		- knows its name
 ###### Coin
 		- knows its value
+		- knows its name
 ###### Container
 		- knows how many products it holds
 		- releases product
