@@ -10,4 +10,8 @@ class Container
 		@products_count -= number
 	end
 
+	def receive(number)
+		@products_count += number
+	end
+
 end

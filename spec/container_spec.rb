@@ -14,5 +14,10 @@ describe Container do
 	expect(container.products_count).to eq 99
 	end
 
+	it 'can receive a product load' do
+	container.receive(1)
+	expect(container.products_count).to eq 101
+	end
+
 
 end
