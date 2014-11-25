@@ -6,4 +6,5 @@ describe Coin do
 		coin = Coin.new(0.01)
 		expect(coin.value).to eq 0.01 
 	end
+
 end

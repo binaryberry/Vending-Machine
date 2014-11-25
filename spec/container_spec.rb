@@ -19,5 +19,4 @@ describe Container do
 	expect(container.products_count).to eq 101
 	end
 
-
 end
