@@ -61,6 +61,7 @@ describe Coin do
 	end
 
 
-	# it "cannot be a value other than 1p, 2p, 5p, 10p, 20p, 50p, £1, £2" do
-	# end
+	it "cannot be a value other than 1p, 2p, 5p, 10p, 20p, 50p, £1, £2" do
+		expect{ Coin.new(0.03, "fake coin") }.to raise_error("Invalid coin")
+	end
 end

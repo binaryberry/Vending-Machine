@@ -28,7 +28,6 @@ describe Holder do
 	holder.release(60)
 	holder.receive(30)
 	expect(holder.items_count).to eq 70
-	expect { raise "oops" }.to raise_error("oops")
 	end
 
 	it 'cannot have more items than its capacity' do
