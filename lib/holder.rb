@@ -13,5 +13,7 @@ module Holder
 		@items_count -= number
 	end
 
-
+	def receive(number)
+		@items_count += number
+	end
 end
