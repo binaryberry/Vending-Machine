@@ -1,4 +1,8 @@
+require_relative 'holder'
+
 class Container
+
+	include Holder
 
 	attr_accessor :products_count
 

@@ -1,4 +1,8 @@
+require_relative 'holder'
+
 class Till
+
+	include Holder
 
 	attr_reader :total
 
