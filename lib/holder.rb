@@ -14,6 +14,7 @@ module Holder
 	end
 
 	def receive(number)
+		raise "Holder full, cannot receive items" if number + @items_count > capacity
 		@items_count += number
 	end
 end
