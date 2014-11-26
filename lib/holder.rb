@@ -1,12 +1,16 @@
 
 module Holder
 
-	def initialize(capacity)
+	attr_reader :capacity
+	attr_accessor :items_count
+
+	def initialize(capacity=100, items_count=100)
 		@capacity = capacity
+		@items_count = items_count
 	end
 
-	def capacity
-		@capacity
+	def release(number)
+		@items_count -= number
 	end
 
 
