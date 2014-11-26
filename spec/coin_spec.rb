@@ -15,49 +15,49 @@ describe Coin do
 	it "can be 1p" do
 		coin = Coin.one_pence
 		expect(coin.value).to eq 0.01
-		expect(coin.name).to eq "1p"
+		expect(coin.name).to eq "one_pence"
 	end
 
 	it "can be 2p" do
 		coin = Coin.two_pence
 		expect(coin.value).to eq 0.02
-		expect(coin.name).to eq "2p"
+		expect(coin.name).to eq "two_pence"
 	end
 
 	it "can be 5p" do
 		coin = Coin.five_pence
 		expect(coin.value).to eq 0.05
-		expect(coin.name).to eq "5p"
+		expect(coin.name).to eq "five_pence"
 	end
 
 	it "can be 10p" do
 		coin = Coin.ten_pence
 		expect(coin.value).to eq 0.1
-		expect(coin.name).to eq "10p"
+		expect(coin.name).to eq "ten_pence"
 	end
 
 	it "can be 20p" do
 		coin = Coin.twenty_pence
 		expect(coin.value).to eq 0.20
-		expect(coin.name).to eq "20p"
+		expect(coin.name).to eq "twenty_pence"
 	end
 
 	it "can be 50p" do
 		coin = Coin.fifty_pence
 		expect(coin.value).to eq 0.50
-		expect(coin.name).to eq "50p"
+		expect(coin.name).to eq "fifty_pence"
 	end
 
 	it "can be £1" do
 		coin = Coin.one_pound
 		expect(coin.value).to eq 1
-		expect(coin.name).to eq "£1"
+		expect(coin.name).to eq "one_pound"
 	end
 
 	it "can be £2" do
 		coin = Coin.two_pounds
 		expect(coin.value).to eq 2
-		expect(coin.name).to eq "£2"
+		expect(coin.name).to eq "two_pounds"
 	end
 
 
