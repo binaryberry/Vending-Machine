@@ -10,6 +10,7 @@ module Holder
 	end
 
 	def release(number)
+		raise "Holder empty, cannot release items" if number > @items_count
 		@items_count -= number
 	end
 

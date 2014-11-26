@@ -35,4 +35,9 @@ describe Holder do
 	expect { holder.receive(1) }.to raise_error("Holder full, cannot receive items") 
 	end
 
+	it "cannot release items when it's empty" do
+	holder.release(100)
+	expect { holder.release(1) }.to raise_error("Holder empty, cannot release items") 
+	end
+
 end
