@@ -9,7 +9,7 @@ describe Till do
 	it 'can receive a coin' do
 		till.receive(coin)
 		expect(till.total).to eq 1
-		expect(till.one_pound).to eq 1
+		expect(till.one_pound.count).to eq 1
 	end
 
 	# it 'can release a coin' do
