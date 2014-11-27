@@ -24,16 +24,20 @@ describe Mini_Computer do
 		expect(wall_e.current_budget).to eq 1.5
 		end
 
-		it "allows the client to purchase a product if budget is sufficient" do
+		it "allows the client to purchase a product" do
 		water = Product.new(2, "water")
 		wall_e.receive(Coin.new(2))
 		wall_e.order_product(water)
 		expect(wall_e.container.products_count).to eq 99
 		end
 
-
+		it "displays an error message if budget is too low to buy product" do
+		water = Product.new(2, "water")
+		wall_e.receive(Coin.new(1))
+		expect{ wall_e.order_product(water) }.to raise_error("please insert more coins")
+		end
 	end
-
+	
 	context "cashing in" do
 		it "adds the coins the clients has inserted to the till" do
 			water = Product.new(2, "water")
@@ -44,4 +48,5 @@ describe Mini_Computer do
 		end
 
 	end
+
 end
