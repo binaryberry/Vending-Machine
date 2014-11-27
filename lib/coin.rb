@@ -11,8 +11,6 @@ class Coin
 		for i in 0..NUMBER_OF_ACCEPTED_COINS do 
 			@coins[ACCEPTED_COIN_VALUES[i]]=ACCEPTED_COIN_NAMES[i]
 		end
-		puts "the coins!"
-		puts @coins
 		raise "Invalid coin" unless @coins.has_key?(value) == true
 		@value = value
 		@name = name

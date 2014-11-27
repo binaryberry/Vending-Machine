@@ -27,11 +27,10 @@ class Till
 
 	def accept(coin)
 		@total += coin.value
-		@coin_types.each do |coin_type| 
-			for i in 0..NUMBER_OF_ACCEPTED_COINS do
-				coin_type << coin if coin.value == ACCEPTED_COIN_VALUES[i]
-			end
+		for i in 0..NUMBER_OF_ACCEPTED_COINS do
+			@coin_types[i] << coin if coin.value == ACCEPTED_COIN_VALUES[i]
 		end
+		
 	end
 
 	# def release(coin_value)
