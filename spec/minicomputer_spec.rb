@@ -31,5 +31,17 @@ describe Mini_Computer do
 		expect(wall_e.container.products_count).to eq 99
 		end
 
+
+	end
+
+	context "cashing in" do
+		it "adds the coins the clients has inserted to the till" do
+			water = Product.new(2, "water")
+			wall_e.receive(Coin.new(1))
+			wall_e.receive(Coin.new(1))
+			wall_e.order_product(water)
+		expect(wall_e.till.one_pound.count).to eq 22
+		end
+
 	end
 end

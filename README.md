@@ -25,5 +25,7 @@ Design a vending machine in code. The vending machine, once a product is selecte
 		- calculates change that needs to be returned
 		- knows how many coins to return
 		- decides to release product
+		- returns change if necessary
+		- updates container and till inventory
 
 
