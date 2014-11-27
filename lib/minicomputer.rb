@@ -1,6 +1,3 @@
-require 'till'
-require 'coin'
-
 class Mini_Computer
 
 	ACCEPTED_COIN_VALUES = [0.01, 0.02, 0.05, 0.1, 0.2, 0.5 , 1, 2]
@@ -21,6 +18,10 @@ class Mini_Computer
 
 	def receive(coin)
 		@current_budget += coin.value
+	end
+
+	def order_product(product)
+	@container.products_count -= 1
 	end
 
 end

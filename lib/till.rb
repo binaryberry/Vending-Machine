@@ -33,4 +33,6 @@ class Till
 		@total -= coin.value
 	end
 
+
+
 end
