@@ -17,10 +17,11 @@ Design a vending machine in code. The vending machine, once a product is selecte
 		- releases product
 		- receives products
 ###### Till
-		- knows how many coins it holds
-		- calculates amount inserted
+		- knows how many coins of each kind it holds
 
 ###### MiniComputer
+		- loads the vending machine with products and coins on initialization
+		- calculates amount inserted
 		- calculates change that needs to be returned
 		- knows how many coins to return
 
