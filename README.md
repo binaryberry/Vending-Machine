@@ -12,14 +12,15 @@ Design a vending machine in code. The vending machine, once a product is selecte
 		- knows its name
 ###### Coin
 		- knows its value
-		- knows its name
 ###### Container
 		- knows how many products it holds
 		- releases product
-		- receives product load
+		- receives products
 ###### Till
 		- knows how many coins it holds
 		- calculates amount inserted
+
+###### MiniComputer
 		- calculates change that needs to be returned
 		- knows how many coins to return
 
