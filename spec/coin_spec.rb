@@ -2,7 +2,6 @@ require 'coin'
 
 
 describe Coin do
-			ACCEPTED_COIN_NAMES = ["one_pence", "two_pence", "five_pence", "ten_pence", "twenty_pence", "fifty_pence", "one_pound", "two_pounds"]
 	it "knows its value" do
 		coin = Coin.new(0.01)
 		expect(coin.value).to eq 0.01 
