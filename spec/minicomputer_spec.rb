@@ -37,15 +37,22 @@ describe Mini_Computer do
 		expect{ wall_e.order_product(water) }.to raise_error("please insert more coins")
 		end
 	end
-	
-	context "cashing in" do
+
+	context "after purchase" do
 		it "adds the coins the clients has inserted to the till" do
-			water = Product.new(2, "water")
-			wall_e.receive(Coin.new(1))
-			wall_e.receive(Coin.new(1))
-			wall_e.order_product(water)
+		water = Product.new(2, "water")
+		wall_e.receive(Coin.new(1))
+		wall_e.receive(Coin.new(1))
+		wall_e.order_product(water)
 		expect(wall_e.till.one_pound.count).to eq 22
 		end
+
+		# it "returns change when there is one coin to return" do
+		# nuts = Product.new(1.5, "nuts")
+		# wall_e.receive(Coin.new(2))
+		# expect(wall_e.return_change(nuts)).to eq 0.5
+
+		# end
 
 	end
 

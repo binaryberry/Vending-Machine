@@ -5,6 +5,8 @@ describe Till do
 
 	let(:till) {Till.new}
 	let(:coin) {Coin.new(1)}
+	let(:small_coin) {Coin.new(0.02)}
+
 
 
 	it 'can receive a coin' do
@@ -14,7 +16,6 @@ describe Till do
 	end
 
 	it "can receive three coins" do
-		small_coin = Coin.new(0.02)
 		small_coin2 = Coin.new(0.02)
 		till.accept(coin)
 		till.accept(small_coin)
@@ -28,7 +29,10 @@ describe Till do
 	it 'can release a coin' do
 		till.accept(coin)
 		till.return(coin)
-		expect(till.total).to eq 0
+		till.accept(small_coin)
+		expect(till.total).to eq 0.02
+		expect(till.one_pound.count).to eq 0
+		expect(till.two_pence.count).to eq 1
 	end
 	
 end

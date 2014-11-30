@@ -4,6 +4,7 @@ class Mini_Computer
 	NUMBER_OF_ACCEPTED_COINS = 7 
 
 	attr_reader :container, :till, :current_budget, :coins_inserted
+	attr_accessor :return_change
 
 	def initialize(container_capacity=100, container_products_count=100, coin_load=20)
 		@container=Container.new(container_capacity, container_products_count)
@@ -24,10 +25,24 @@ class Mini_Computer
 
 	def order_product(product)
 		raise "please insert more coins" if product.price > @current_budget
+		return_change(product)
 		@container.products_count -= 1
 		@coins_inserted.each do |coin|
 			till.accept(coin)
 		end
+	end
+
+	def return_change(product)
+		@return_change = []
+		amount_owed = @current_budget - product.price
+		if ACCEPTED_COIN_VALUES.include?(amount_owed) do
+			till.coin_types[ACCEPTED_COIN_VALUES.index{|coin_type| coin_type == amount_owed}].pop
+			
+			end
+		end
+	end
+
+	def remove_coin_from_till(value)
 	end
 
 end
