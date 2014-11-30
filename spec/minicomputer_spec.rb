@@ -47,12 +47,18 @@ describe Mini_Computer do
 		expect(wall_e.till.one_pound.count).to eq 22
 		end
 
-		# it "returns change when there is one coin to return" do
-		# nuts = Product.new(1.5, "nuts")
-		# wall_e.receive(Coin.new(2))
-		# expect(wall_e.return_change(nuts)).to eq 0.5
+		it "returns change when there is one coin to return" do
+		nuts = Product.new(1.5, "nuts")
+		wall_e.receive(Coin.new(2))
+		expect(wall_e.return_change(nuts)[0].value).to eq 0.5
+		end
 
-		# end
+		it "returns change when there are 2 coins to return" do
+		apple = Product.new(0.8, "apple")
+		wall_e.receive(Coin.new(2))
+		expect(wall_e.return_change(apple)[0].value).to eq 1
+		expect(wall_e.return_change(apple)[1].value).to eq 0.2
+		end
 
 	end
 

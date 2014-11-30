@@ -35,6 +35,10 @@ class Till
 		end
 	end
 
+	def go_to_coin_type(value)
+		coin_types[ACCEPTED_COIN_VALUES.index(value)]
+	end
+
 
 
 end
