@@ -1,0 +1,5 @@
+require './lib/minicomputer'
+require './lib/container'
+require './lib/product'
+require './lib/till'
+require './lib/coin'
