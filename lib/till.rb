@@ -33,7 +33,7 @@ class Till
 		# binding.pry 
 		@total -= coin.value
 		for i in 0..(NUMBER_OF_ACCEPTED_COINS-1) do
-			@coin_types[i].delete_at(0) if @coin_types[i][0].value == ACCEPTED_COIN_VALUES[i]
+			@coin_types[i].delete_at(0) if coin.value == ACCEPTED_COIN_VALUES[i]
 		end
 		coin
 	end
