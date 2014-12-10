@@ -48,9 +48,8 @@ class Mini_Computer
 					amount_owed = BigDecimal("#{amount_owed}") - BigDecimal("#{ACCEPTED_COIN_VALUES[i]}").to_f
 				p "updated amount owed is #{amount_owed}"
 				p "THESE ARE ACCEPTED_COIN_VALUES#{ACCEPTED_COIN_VALUES[i]}"
-				p "that's what return coin returns #{return_coin(ACCEPTED_COIN_VALUES[i])}"
 					return_coin(ACCEPTED_COIN_VALUES[i])
-					@till.go_to_coin_type(ACCEPTED_COIN_VALUES[i])
+					# @till.go_to_coin_type(ACCEPTED_COIN_VALUES[i])
 				p "return change in if is #{@return_change}"
 				elsif amount_owed == 0
 				@return_change
