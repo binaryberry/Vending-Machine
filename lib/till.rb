@@ -20,7 +20,8 @@ class Till
 		@coin_types = [@one_pence, @two_pence, @five_pence, @ten_pence, @twenty_pence, @fifty_pence, @one_pound,@two_pounds]
 	end
 
-	def accept(coin)
+	def accept(coin) 
+		# remember to bang this!
 		@total += coin.value
 		for i in 0..(NUMBER_OF_ACCEPTED_COINS-1) do
 			@coin_types[i] << coin if coin.value == ACCEPTED_COIN_VALUES[i]
@@ -29,6 +30,7 @@ class Till
 	end
 
 	def return(coin)
+		# remember to bang this
 		# require "pry"
 		# binding.pry 
 		@total -= coin.value
@@ -39,8 +41,6 @@ class Till
 	end
 
 	def go_to_coin_type(value)
-		# require "pry"
-		# 		binding.pry
 		@coin_types[ACCEPTED_COIN_VALUES.index(value)]
 	end
 

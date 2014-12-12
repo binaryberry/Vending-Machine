@@ -42,22 +42,14 @@ class Mini_Computer
 		else
 			i = NUMBER_OF_ACCEPTED_COINS-1
 			while i >= 0 do
-			p "i #{i} amount owed: #{amount_owed} accepted coin value:#{ACCEPTED_COIN_VALUES[i]}"
 				if amount_owed >= ACCEPTED_COIN_VALUES[i] && amount_owed > 0.01
-				p "amount owed: #{amount_owed}"
 					amount_owed = BigDecimal("#{amount_owed}") - BigDecimal("#{ACCEPTED_COIN_VALUES[i]}").to_f
-				p "updated amount owed is #{amount_owed}"
-				p "THESE ARE ACCEPTED_COIN_VALUES#{ACCEPTED_COIN_VALUES[i]}"
 					return_coin(ACCEPTED_COIN_VALUES[i])
-					# @till.go_to_coin_type(ACCEPTED_COIN_VALUES[i])
-				p "return change in if is #{@return_change}"
 				elsif amount_owed == 0
 				@return_change
-
 				end
 				i -= 1
 			end
-				p "return change after while loop is #{@return_change}"
 		end
 	@return_change
 	end
