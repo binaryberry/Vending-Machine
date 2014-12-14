@@ -30,7 +30,7 @@ class Mini_Computer
 		return_change(product)
 		@container.products_count -= 1
 		@coins_inserted.each do |coin|
-			till.accept(coin)
+			till.accept!(coin)
 		end
 	end
 
@@ -56,7 +56,7 @@ class Mini_Computer
 
 	def return_coin(value)
 		coin_to_return = @till.go_to_coin_type(value)[0]
-		@till.return(coin_to_return)
+		@till.return!(coin_to_return)
 		@return_change << coin_to_return
 	end
 
