@@ -13,19 +13,19 @@ Design a vending machine in code. The vending machine, once a product is selecte
 ###### Coin
 		- knows its value
 ###### Container
-		- knows how many products it holds
+		- knows how many products of each kind it holds
 		- releases product
 		- receives products
 ###### Till
 		- knows how many coins of each kind it holds
+		- accepts coins
+		- releases coins
 
 ###### MiniComputer
-		- loads the vending machine with products and coins on initialization
+		- loads the vending machine with products and coins on initialization - by default it can hold 100 products, and starts full
 		- calculates amount inserted
-		- calculates change that needs to be returned
-		- knows how many coins to return
 		- decides to release product
-		- returns change if necessary
-		- updates container,till inventory, current budget
+		- calculates change that needs to be returned and knows how many coins to return
+		- updates container inventory, till inventory and current budget
 
 

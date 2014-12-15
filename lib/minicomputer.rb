@@ -8,8 +8,8 @@ class Mini_Computer
 	attr_reader :container, :till, :current_budget, :coins_inserted
 	attr_accessor :return_change
 
-	def initialize(container_capacity=100, container_products_count=100, coin_load=20)
-		@container=Container.new(container_capacity, container_products_count)
+	def initialize(container_capacity=100, products_load=100, coin_load=20)
+		@container=Container.new
 		@till=Till.new
 		for i in 0..(NUMBER_OF_ACCEPTED_COINS-1) do
 			coin_load.times do
