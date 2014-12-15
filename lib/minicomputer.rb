@@ -45,8 +45,6 @@ class Mini_Computer
 				if amount_owed >= ACCEPTED_COIN_VALUES[i] && amount_owed > 0.01
 					amount_owed = BigDecimal("#{amount_owed}") - BigDecimal("#{ACCEPTED_COIN_VALUES[i]}").to_f
 					return_coin(ACCEPTED_COIN_VALUES[i])
-				elsif amount_owed == 0
-				@return_change
 				end
 				i -= 1
 			end
