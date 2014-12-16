@@ -31,4 +31,4 @@ Design a vending machine in code. The vending machine, once a product is selecte
 		- cashes in the money inserted
 
 ##Notes
-This Vending machine was entirely TDDed! And it only contains healthy foods because that's how I roll.
+This Vending machine was entirely TDDed, and only contains healthy foods because that's how I roll.
