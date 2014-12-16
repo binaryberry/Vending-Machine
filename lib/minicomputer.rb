@@ -28,7 +28,7 @@ class Mini_Computer
 	def order_product(product)
 		raise "please insert more coins" if product.price > @current_budget
 		return_change(product)
-		@container.products_count -= 1
+		@container.products_load -= 1
 		@coins_inserted.each do |coin|
 			till.accept!(coin)
 		end

@@ -6,7 +6,7 @@ describe Mini_Computer do
 
 	context "initialisation" do
 		it 'loads the vending machine with 100 products on initialisation' do
-		expect(wall_e.container.products_count).to eq 100
+		expect(wall_e.container.products_load).to eq 100
 		end
 
 		it "loads the till with 20 coins of each type on initialisation" do
@@ -28,7 +28,7 @@ describe Mini_Computer do
 		water = Product.new(2, "water")
 		wall_e.receive(Coin.new(2))
 		wall_e.order_product(water)
-		expect(wall_e.container.products_count).to eq 99
+		expect(wall_e.container.products_load).to eq 99
 		end
 
 		it "displays an error message if budget is too low to buy product" do
