@@ -30,4 +30,5 @@ Design a vending machine in code. The vending machine, once a product is selecte
 		- calculates change that needs to be returned and knows how many coins to return
 		- cashes in the money inserted
 
-
+##Notes
+This Vending machine was entirely TDDed! And it only contains healthy foods because that's how I roll.
