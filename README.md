@@ -14,6 +14,7 @@ Design a vending machine in code. The vending machine, once a product is selecte
 		- knows its value
 ###### Container
 		- knows how many products of each kind it holds
+		- is initialised with an equal amount of each type of product
 		- releases product
 		- receives products
 ###### Till
@@ -25,6 +26,7 @@ Design a vending machine in code. The vending machine, once a product is selecte
 		- loads the vending machine with products and coins on initialization - by default it can hold 100 products, and starts full
 		- calculates amount inserted
 		- decides to release product
+		- asks for more money if money inserted not enough
 		- calculates change that needs to be returned and knows how many coins to return
 		- updates container inventory, till inventory and current budget
 
