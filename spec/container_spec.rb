@@ -6,11 +6,11 @@ describe Container do
 	let(:container) {Container.new}
 
 	context "on initialisation" do
-		it 'has a capacity of 100 on initialisation' do
+		it 'has a capacity of 100' do
 		expect(container.capacity).to eq 100	
 		end
 
-		it 'has 100 items on initialisation' do
+		it 'has 100 items' do
 		expect(container.products_load).to eq 100
 		end
 

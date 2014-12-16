@@ -17,13 +17,18 @@ Design a vending machine in code. The vending machine, once a product is selecte
 		- is initialised with an equal amount of each type of product
 		- releases product
 		- receives products
+		- knows when it is full 
+		- knows when it is empty 
+
 ###### Till
 		- knows how many coins of each kind it holds
 		- accepts coins
 		- releases coins
+		- knows when it is full 
+		- knows when it is empty 
 
 ###### MiniComputer
-		- loads the vending machine with products and coins on initialization - by default it can hold 100 products, and starts full
+		- loads the vending machine with products and coins on initialization - by default 25 products of each type and 20 coins of each type.
 		- calculates and keeps track of amount inserted
 		- decides whether to release product
 		- asks for more money if money inserted not enough

@@ -34,5 +34,15 @@ describe Till do
 		expect(till.one_pound.count).to eq 0
 		expect(till.two_pence.count).to eq 1
 	end
+
+	it 'has a capacity of 100 for each coin type' do
+		expect(till.capacity).to eq 100
+	end
 	
 end
+		# i = 100
+		# while i > 0 do
+		# 	till.accept!(coin)
+		# 	till.accept!(small_coin)
+		# 	i -=1
+		# end

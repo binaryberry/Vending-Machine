@@ -2,12 +2,13 @@ require_relative 'coin'
 
 class Till
 
-	attr_accessor :one_pence, :two_pence, :five_pence, :ten_pence, :twenty_pence, :fifty_pence, :one_pound, :two_pounds, :coin_types, :total
+	attr_accessor :one_pence, :two_pence, :five_pence, :ten_pence, :twenty_pence, :fifty_pence, :one_pound, :two_pounds, :coin_types, :total, :capacity
 
 	ACCEPTED_COIN_VALUES = [0.01, 0.02, 0.05, 0.1, 0.2, 0.5 , 1, 2]
 	NUMBER_OF_ACCEPTED_COINS = 8 
 
-	def initialize
+	def initialize(capacity=100)
+		@capacity = capacity
 		@total = 0
 		@one_pence = []
 		@two_pence = []
