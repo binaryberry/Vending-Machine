@@ -39,10 +39,12 @@ describe Till do
 		expect(till.capacity).to eq 100
 	end
 	
+	it 'knows when one of its holders is full' do
+		i = 100
+		while i > 0 do
+			till.accept!(coin)
+			i -=1
+		end
+		expect{ till.accept!(coin) }.to raise_error("1 pound(s) coin holder full")
+	end
 end
-		# i = 100
-		# while i > 0 do
-		# 	till.accept!(coin)
-		# 	till.accept!(small_coin)
-		# 	i -=1
-		# end
