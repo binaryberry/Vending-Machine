@@ -34,7 +34,13 @@ describe Mini_Computer do
 		it "displays an error message if budget is too low to buy product" do
 		water = Product.new(2, "water")
 		wall_e.receive(Coin.new(1))
-		expect{ wall_e.order_product(water) }.to raise_error("please insert more coins")
+		expect{ wall_e.order_product(water) }.to raise_error
+		end
+
+		it "displays amount needed if budget is too low to buy product" do
+		water = Product.new(2, "water")
+		wall_e.receive(Coin.new(1))
+		expect{ wall_e.order_product(water) }.to raise_error("To purchase this product please insert an extra £1.")
 		end
 	end
 
