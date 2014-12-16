@@ -7,11 +7,11 @@ class Container
 	def initialize(capacity=100, products_load = 100)
 		@capacity = capacity
 		@products_load = products_load
-		# product_type_quantity = products_load/4
-		@apples = Array.new(25) { |i| Product.new(0.8, "apple") }
-		@nuts = Array.new(25) { |i| Product.new(1.5, "nut") }
-		@water = Array.new(25) { |i| Product.new(2, "water") }
-		@smoothies = Array.new(25) { |i| Product.new(3, "smoothie") }
+		quantity_of_each_product = products_load/4
+		@apples = Array.new(quantity_of_each_product) { |i| Product.new(0.8, "apple") }
+		@nuts = Array.new(quantity_of_each_product) { |i| Product.new(1.5, "nut") }
+		@water = Array.new(quantity_of_each_product) { |i| Product.new(2, "water") }
+		@smoothies = Array.new(quantity_of_each_product) { |i| Product.new(3, "smoothie") }
 	end
 
 	def release(number)

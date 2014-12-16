@@ -39,6 +39,18 @@ describe Container do
 	expect(container.smoothies[0]).to be_a(Product)
 	end
 
+	it 'has an equal quantity of apples, nuts, water and smoothies upon initialisation, even when product load not default' do
+	small_container = Container.new(40, 40)
+	expect(small_container.apples.count).to eq 10
+	expect(small_container.apples[0]).to be_a(Product)
+	expect(small_container.nuts.count).to eq 10
+	expect(small_container.nuts[0]).to be_a(Product)
+	expect(small_container.water.count).to eq 10
+	expect(small_container.water[0]).to be_a(Product)
+	expect(small_container.smoothies.count).to eq 10
+	expect(small_container.smoothies[0]).to be_a(Product)
+	end
+
 	it 'cannot have more items than its capacity' do
 	expect { container.receive(1) }.to raise_error("Holder full, cannot receive items") 
 	end
