@@ -22,20 +22,22 @@ class Till
 	end
 
 	def accept!(coin) 
-		@total += coin.value
 		for i in 0..(NUMBER_OF_ACCEPTED_COINS-1) do
 			raise("#{@coin_types[i][0].value} pound(s) coin holder full") if @coin_types[i].count > capacity
 			@coin_types[i] << coin if coin.value == ACCEPTED_COIN_VALUES[i]
 		end
+		@total += coin.value
 		
 	end
 
 	def return!(coin)
-		@total -= coin.value
 		for i in 0..(NUMBER_OF_ACCEPTED_COINS-1) do
-			@coin_types[i].delete_at(0) if coin.value == ACCEPTED_COIN_VALUES[i]
+			if coin.value == ACCEPTED_COIN_VALUES[i]
+				raise("#{ACCEPTED_COIN_VALUES[i]} pound(s) coin holder empty") if @coin_types[i].count == 0
+				@coin_types[i].delete_at(0)
+			end
 		end
-		coin
+		@total -= coin.value
 	end
 
 	def go_to_coin_type(value)

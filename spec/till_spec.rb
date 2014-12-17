@@ -41,10 +41,20 @@ describe Till do
 	
 	it 'knows when one of its holders is full' do
 		i = 100
-		while i > 0 do
+		while i >= 0 do
 			till.accept!(coin)
 			i -=1
 		end
 		expect{ till.accept!(coin) }.to raise_error("1 pound(s) coin holder full")
 	end
+
+	it 'knows when one of its holders is empty' do
+		expect{ till.return!(coin) }.to raise_error("1 pound(s) coin holder empty")
+	end
+
+
+
+
+
+
 end
