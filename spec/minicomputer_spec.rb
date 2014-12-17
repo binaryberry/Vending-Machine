@@ -5,6 +5,7 @@ describe Mini_Computer do
 	let(:wall_e) {Mini_Computer.new}
 
 	context "initialisation" do
+
 		it 'loads the vending machine with 100 products on initialisation' do
 		expect(wall_e.container.products_load).to eq 100
 		end
@@ -14,6 +15,7 @@ describe Mini_Computer do
 		expect(wall_e.till.two_pounds.count).to eq 20
 		expect(wall_e.till.fifty_pence[0]).to be_a(Coin)
 		end
+
 	end
 
 	context "purchase" do
@@ -42,9 +44,11 @@ describe Mini_Computer do
 		wall_e.receive(Coin.new(1))
 		expect{ wall_e.order_product(water) }.to raise_error("To purchase this product please insert an extra £1.")
 		end
+
 	end
 
 	context "after purchase" do
+
 		it "adds the coins the clients has inserted to the till" do
 		water = Product.new(2, "water")
 		wall_e.receive(Coin.new(1))
@@ -72,7 +76,8 @@ describe Mini_Computer do
 		expect(wall_e.return_change(apple)[0].value).to eq 1
 		expect(wall_e.return_change(apple)[1].value).to eq 0.2
 		end
-
+		
 	end
 
 end
+

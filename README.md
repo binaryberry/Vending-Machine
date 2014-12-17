@@ -10,8 +10,10 @@ Design a vending machine in code. The vending machine, once a product is selecte
 ###### Product
 		- knows its price
 		- knows its name
+
 ###### Coin
 		- knows its value
+
 ###### Container
 		- knows how many products of each kind it holds
 		- is initialised with an equal amount of each type of product
@@ -30,10 +32,10 @@ Design a vending machine in code. The vending machine, once a product is selecte
 ###### MiniComputer
 		- loads the vending machine with products and coins on initialization - by default 25 products of each type and 20 coins of each type.
 		- calculates and keeps track of amount inserted
-		- decides whether to release product
 		- asks for more money if money inserted not enough
+		- decides whether to release product
 		- calculates change that needs to be returned and knows how many coins to return
-		- cashes in the money inserted
+		- puts the coins earned in the till after purchase
 
 ##Notes
 This Vending machine was entirely TDDed, and only contains healthy foods because that's how I roll.

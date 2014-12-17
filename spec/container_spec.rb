@@ -6,6 +6,7 @@ describe Container do
 	let(:container) {Container.new}
 
 	context "on initialisation" do
+
 		it 'has a capacity of 100' do
 		expect(container.capacity).to eq 100	
 		end
@@ -39,6 +40,7 @@ describe Container do
 	end
 
 	context 'basic functionality' do
+
 		it 'knows how many products it has' do
 		expect(container.products_load).to eq 100
 		end
@@ -53,6 +55,7 @@ describe Container do
 		container.receive(1)
 		expect(container.products_load).to eq 95
 		end
+
 	end
 
 	context 'error messages' do
@@ -65,6 +68,6 @@ describe Container do
 		container.release(100)
 		expect { container.release(1) }.to raise_error("Holder empty, cannot release items") 
 		end
-	end
 
+	end
 end

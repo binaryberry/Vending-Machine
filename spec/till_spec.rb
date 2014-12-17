@@ -7,8 +7,6 @@ describe Till do
 	let(:coin) {Coin.new(1)}
 	let(:small_coin) {Coin.new(0.02)}
 
-
-
 	it 'can receive a coin' do
 		till.accept!(coin)
 		expect(till.total).to eq 1
@@ -51,10 +49,4 @@ describe Till do
 	it 'knows when one of its holders is empty' do
 		expect{ till.return!(coin) }.to raise_error("1 pound(s) coin holder empty")
 	end
-
-
-
-
-
-
 end
