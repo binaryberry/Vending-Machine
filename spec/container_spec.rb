@@ -46,14 +46,16 @@ describe Container do
 		end
 
 		it 'can release a product' do
-		container.release(1)
+		container.release(1, "water")
 		expect(container.products_load).to eq 99
+		expect(container.water.count).to eq 24
 		end
 
 		it 'can receive a product' do
-		container.release(6)
-		container.receive(1)
-		expect(container.products_load).to eq 95
+		container.release(6, "water")
+		container.receive(3, "water")
+		expect(container.products_load).to eq 97
+		expect(container.water.count).to eq 22
 		end
 
 	end
@@ -61,12 +63,12 @@ describe Container do
 	context 'error messages' do
 
 		it 'cannot have more items than its capacity' do
-		expect { container.receive(1) }.to raise_error("Holder full, cannot receive items") 
+		expect { container.receive(1, "water") }.to raise_error("water holder full, sorry") 
 		end
 
 		it "cannot release items when it's empty" do
-		container.release(100)
-		expect { container.release(1) }.to raise_error("Holder empty, cannot release items") 
+		empty_container = Container.new(100, 0)
+		expect { empty_container.release(1, "water") }.to raise_error("water not in stock, sorry") 
 		end
 
 	end

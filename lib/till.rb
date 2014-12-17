@@ -27,7 +27,6 @@ class Till
 			@coin_types[i] << coin if coin.value == ACCEPTED_COIN_VALUES[i]
 		end
 		@total += coin.value
-		
 	end
 
 	def return!(coin)

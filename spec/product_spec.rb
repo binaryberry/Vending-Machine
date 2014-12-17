@@ -11,4 +11,5 @@ describe Product do
 		product = Product.new(2, "water")
 		expect(product.name).to eq "water" 
 	end
+
 end
