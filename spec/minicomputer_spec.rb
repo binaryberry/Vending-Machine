@@ -33,7 +33,7 @@ describe Mini_Computer do
 		expect(wall_e.container.products_load).to eq 99
 		end
 
-		xit "updates the container count for that type of product" do
+		it "updates the container count for that type of product" do
 		wall_e.receive(Coin.new(2))
 		wall_e.order_product(water)
 		expect(wall_e.container.water.count).to eq 24

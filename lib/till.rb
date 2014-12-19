@@ -23,7 +23,7 @@ class Till
 
 	def accept!(coin) 
 		for i in 0..(NUMBER_OF_ACCEPTED_COINS-1) do
-			raise("#{@coin_types[i][0].value} pound(s) coin holder full") if @coin_types[i].count > capacity
+			raise("#{@coin_types[i][0].value} pound(s) coin holder full") if @coin_types[i].count + 1 > capacity
 			@coin_types[i] << coin if coin.value == ACCEPTED_COIN_VALUES[i]
 		end
 		@total += coin.value

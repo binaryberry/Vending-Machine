@@ -39,7 +39,7 @@ describe Till do
 	
 	it 'knows when one of its holders is full' do
 		i = 100
-		while i >= 0 do
+		while i > 0 do
 			till.accept!(coin)
 			i -=1
 		end

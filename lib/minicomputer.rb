@@ -29,7 +29,7 @@ class Mini_Computer
 		money_gap = product.price - @current_budget
 		raise "To purchase this product please insert an extra £#{money_gap}." if money_gap > 0
 		return_change(product)
-		@container.products_load -= 1
+		@container.release(1, product.name)
 		@coins_inserted.each do |coin|
 			till.accept!(coin)
 		end
